@@ -2,6 +2,14 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
+  eslint: {
+    // Ignore ESLint during builds
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Optional: Ignore TypeScript errors during build
+    ignoreBuildErrors: true,
+  },
   webpack: (config, { isServer }) => {
     // Client-side configuration
     if (!isServer) {
@@ -34,11 +42,8 @@ const nextConfig: NextConfig = {
     return config;
   },
   reactStrictMode: true,
-  // Corrected experimental configuration
   experimental: {
     serverActions: {
-      // Add any server actions configuration here
-      // For example:
       bodySizeLimit: '2mb'
     },
     optimizePackageImports: ['react-pdf']

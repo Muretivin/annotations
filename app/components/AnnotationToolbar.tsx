@@ -30,7 +30,6 @@ export default function AnnotationToolbar({
   setActiveColor,
   onExport,
   isLoading,
-  annotations,
   file,
 }: AnnotationToolbarProps) {
   const handleExport = useCallback(async () => {

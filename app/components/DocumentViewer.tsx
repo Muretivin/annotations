@@ -44,7 +44,6 @@ const DocumentViewer = forwardRef<HTMLDivElement, DocumentViewerProps>(
       onDeleteAnnotation,
       onPageChange,
     },
-    ref
   ) => {
     const [numPages, setNumPages] = useState<number | null>(null);
     const [pageNumber, setPageNumber] = useState(1);
@@ -154,7 +153,6 @@ const DocumentViewer = forwardRef<HTMLDivElement, DocumentViewerProps>(
       if (!isDrawing || !signaturePath.points.length || !canvasRef.current) return;
 
       const canvas = canvasRef.current;
-      const rect = canvas.getBoundingClientRect();
 
       // Calculate bounding box of the signature
       const minX = Math.min(...signaturePath.points.map(p => p.x));
@@ -549,7 +547,6 @@ interface AnnotationComponentProps {
 
 const AnnotationComponent = ({
   annotation,
-  onUpdate,
   onDelete,
 }: AnnotationComponentProps) => {
   const [isHovered, setIsHovered] = useState(false);
