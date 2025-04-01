@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
+first clone the project 
+git clone https://github.com/Muretivin/annotations.git
+cd annotations 
+run the command 
+npm install
+then run the command 
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+and navigate to https://localhost 3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ libraries or tools used and why:
+ React-PDF, PDF.js, Canvas API, SVG, React Hooks, TypeScript, Custom UI Components
 
-## Learn More
+ The document annotation tool leverages React-PDF and PDF.js for core PDF rendering and text layer support, with custom UI components for the annotation interface. Canvas API and SVG handle freeform drawing and signature annotations, while React hooks manage component state and annotation lifecycle. The application supports multiple annotation types (highlights, underlines, text boxes, comments, and signatures) with TypeScript ensuring type safety. Utility functions handle ID generation, positioning calculations, and timestamp management for a robust annotation workflow.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+challenges
+conflicts between the libraries which are not compatible
+i had to downgrade to the compatible libraries and alse deleting node modules and starting again through npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+features i would add if i had more time
+Cropping, snipping, drag-and-drop tables
+Charts, graphs, and embedded analytics
+OCR, smart annotation suggestions
+CSV, JSON, and API integrations
